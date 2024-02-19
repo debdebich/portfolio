@@ -469,6 +469,11 @@ footer {
 }
 
 
+.active {
+    border: white 1px solid !important;
+    border-radius: 15px !important;
+}
+
 
 @keyframes html-anim {
     from {transform: translateY(0px);}
@@ -498,3 +503,5 @@ footer {
     from {transform: translateY(0px);}
     to {transform: translateY(-10px);}
 }
+
+
