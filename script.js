@@ -3,7 +3,7 @@ const btns = document.querySelectorAll('.menu__btn a');
 
 
 window.onscroll = function(){
-    const h = document.documentElement.clientHeight;
+    let h = document.documentElement.clientHeight;
 
     if (window.scrollY >= h*4) classLink = '.feedback-link';
     else if (window.scrollY >= h*3) classLink = '.projects-link';
@@ -17,15 +17,13 @@ window.onscroll = function(){
         newActiveBtn.classList.add('active');
         activeBtn.classList.remove('active');
     };
-    console.log(classLink);
-    console.log(newActiveBtn);
 };
 
 
 for (let btn of btns){
     btn.addEventListener('click', function(event){
-        let activeBtn = document.querySelector('.active')
-        btn.classList.add('active')
-        activeBtn.classList.remove('active')
+        let activeBtn = document.querySelector('.active');
+        btn.classList.add('active');
+        activeBtn.classList.remove('active');
     })
 }
