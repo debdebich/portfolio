@@ -1,6 +1,9 @@
 let classLink = '.main-link'
 const btns = document.querySelectorAll('.menu__btn a');
-
+const burgerLines = document.querySelector('.lines__dt')
+const burgerLinesHide = document.querySelector('.lines')
+const burgerMenu = document.querySelector('.burger')
+const burgerBtns = document.querySelectorAll('.burger__btns a')
 
 window.onscroll = function(){
     let h = document.documentElement.clientHeight;
@@ -25,5 +28,23 @@ for (let btn of btns){
         let activeBtn = document.querySelector('.active');
         btn.classList.add('active');
         activeBtn.classList.remove('active');
-    })
-}
+    });
+};
+
+
+
+burgerLines.addEventListener('click', function(event){
+    burgerMenu.style.display = 'flex';
+});
+
+
+burgerLinesHide.addEventListener('click', function(event){
+    burgerMenu.style.display = 'none';
+});
+
+
+for (let burgBtn of burgerBtns){
+    burgBtn.addEventListener('click', function(event){
+    burgerMenu.style.display = 'none';
+    });
+};
